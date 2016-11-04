@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Charts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" type="text/css" href="assets/framework/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/highcharts.css">
+</head>
+<body>
+
+<select id="people">
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+</select>
+ 
+<script src="assets/jquery/jquery.js"></script>
+<script src="assets/js/person.json"></script>
+<script>
+var $select = $('#people');
+/*$.getJSON('assets/js/person.json', function(data){
+	$select.html('');
+	$.each(data.person, function(key, val){
+		$select.append('<option id="'+val.id+'">'+val.name+'</option>');
+	});
+});*/
+$.ajax({
+	url:'assets/js/person.json',
+	dataType:'json',
+	success: function(data){
+		$select.html('');
+		$.each(data.person, function(key, val){
+			$select.append('<option id="'+val.id+'">'+val.name+'</option>');
+		});
+	},
+	error: function(){
+		$select.html('<option id="-1">none available</option>');
+	}
+});
+
+</script>
+</body>
+</html>
