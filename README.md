@@ -54,4 +54,4 @@ Optionally, you can apply a global theme to your charts. A theme is just a set o
 <script type="text/javascript" src="/js/themes/gray.js"></script>
 
 
-2. Parsing JSON data and Clearing existing dropdown list and loading the new JSON data with it. - Named as  Parsing Json Lists in DropDowns
+. Parsing JSON data and Clearing existing dropdown list and loading the new JSON data with it. - Named as  Parsing Json Lists in DropDowns
